@@ -1,4 +1,4 @@
-# name, capacity
+# room_name, capacity
 
 class Room
 
@@ -22,6 +22,23 @@ class Room
   def add_song_to_room(song)
     @songs << song
   end  
+
+  def add_guest_to_room(guest)
+    if guest_count < @capacity
+    @guests << guest
+      return true
+    else
+     return false  
+    end 
+  end
+  
+  def check_out_guests(guest)
+    @guests.pop
+  end   
+
+
+
+
 
 
   
