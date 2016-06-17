@@ -37,12 +37,12 @@ class Room
     guest_to_check_out.delete_at(0) 
   end   
 
-  def add_multiple_songs_to_room(songs)
-    @songs = @songs + songs
+  def add_multiple_songs_to_room(all_songs)
+    @songs = @songs + all_songs
   end    
 
-  def add_multiple_guests_to_room(guests)
-    @guests = @guests + guests
+  def add_multiple_guests_to_room(all_guests)
+    @guests = @guests + all_guests
   end  
 
 
