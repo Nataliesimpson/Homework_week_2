@@ -2,6 +2,7 @@
 # songs get added to rooms
 # guests get added to rooms
 require('minitest/autorun')
+require('pry-byebug')
 require_relative('../room.rb')
 require_relative('../guest.rb')
 require_relative('../song.rb')
@@ -15,8 +16,7 @@ class TestRoom < MiniTest::Test
     @marie = Guest.new("Marie", 35, "Dancing Queen")
     @ashleigh = Guest.new("Ashleigh", 15, "My Way")
 
-    # customer_base = [@frank_the_dog, @nat, @megan, @marie, @ashleigh]
-    # @guests = Guests.new(customer_base)
+    @guests = [@frank_the_dog, @nat, @megan, @marie, @ashleigh]
 
     @song_1 = Song.new("My Way", "Frank Sinatra", :oldschool)
     @song_2 = Song.new("Angels", "Robbie Willaims", :pop)
@@ -25,9 +25,8 @@ class TestRoom < MiniTest::Test
     @song_5 = Song.new("Dancing Queen", "Abba", :disco)
     @song_6 = Song.new("Stayin Alive", "Beegees", :disco)
 
-    # song_library = [@song_1, @song_2, @song_3, @song_4, @song_5, @song_6]
-    # @songs = Songs.new(song_library)
-
+    @karaoke_songs = [@song_1, @song_2, @song_3, @song_4, @song_5, @song_6]
+    
     @room_1 = Room.new("Gold_room", 3)
     @room_2 = Room.new("Silver_room", 1)
   end 
@@ -75,7 +74,10 @@ def test_check_out_guests
   assert_equal(0, @room_2.guest_count() )
 end  
 
-
+def test_add_multiple_songs_to_room
+  @room_1.add_multiple_songs_to_room(@karaoke_songs)
+  assert_equal(6, @room_1.song_count() )
+end  
 
 
 

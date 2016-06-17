@@ -32,10 +32,14 @@ class Room
     end 
   end
   
-  def check_out_guests(guest)
-    @guests.pop
+  def check_out_guests(check_out_guest)
+    guest_to_check_out = @guests.each{|guest| guest.name == check_out_guest.name}
+    guest_to_check_out.delete_at(0) 
   end   
 
+  def add_multiple_songs_to_room(songs)
+    @songs = @songs + songs
+  end    
 
 
 
