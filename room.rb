@@ -41,6 +41,9 @@ class Room
     @songs = @songs + songs
   end    
 
+  def add_multiple_guests_to_room(guests)
+    @guests = @guests + guests
+  end  
 
 
 

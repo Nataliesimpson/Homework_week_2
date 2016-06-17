@@ -79,6 +79,12 @@ def test_add_multiple_songs_to_room
   assert_equal(6, @room_1.song_count() )
 end  
 
+def test_add_multiple_guests_to_room
+  @room_1.add_multiple_guests_to_room(@guests)
+  assert_equal(5, @room_1.guest_count() )
+end  
+
+
 
 
 
