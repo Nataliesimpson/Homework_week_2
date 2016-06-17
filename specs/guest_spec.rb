@@ -14,6 +14,7 @@ class TestGuest < MiniTest::Test
     @nat = Guest.new("Nat", 50, "Don't stop me now")
     @megan = Guest.new("Megan", 10, "Song 2")
     @marie = Guest.new("Marie", 35, "Dancing Queen")
+    @ashleigh = Guest.new("Ashleigh", 15, "My Way")
   end
 
   def test_customer_name
