@@ -1,6 +1,6 @@
 # name, balance, favourite song
 
-class Guests
+class Guest
 
   attr_reader :name, :balance, :favourite_song
 
