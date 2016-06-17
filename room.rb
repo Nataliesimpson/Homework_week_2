@@ -11,15 +11,17 @@ class Room
     @guests = []
   end 
 
-  def room_starts_with_0_songs
+  def song_count
     @songs.length
   end  
 
-  def room_starts_with_0_guests
+  def guest_count
     @guests.length
   end   
 
-
+  def add_song_to_room(song)
+    @songs << song
+  end  
 
 
   
