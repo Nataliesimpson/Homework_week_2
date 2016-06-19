@@ -18,16 +18,21 @@ class Guest
     @balance -= membership_fee
   end
   
-  # def cheer_when_favourite_song(favourite_song)
-  #   if @frank_the_dog.favourite_song == @song_1.song_name
-  #   return "Whooo!"
-  #   else
-  #   return nil
-  #   end
-  # end      
-
- 
-
+  def cheer(guest_favourite_song, favourite_song_name)
+    if (guest_favourite_song == favourite_song_name)
+      return "Whooo!"
+    else
+      return "Not a fan!"
+    end
+  end 
 
 
 end  
+
+
+
+
+
+
+
+

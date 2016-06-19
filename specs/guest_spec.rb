@@ -42,10 +42,15 @@ class TestGuest < MiniTest::Test
     assert_equal(40, @nat.balance)
   end   
 
-  # def test_cheer_when_favourite_song
-  #   @frank_the_dog.cheer_when_favourite_song(favourite_song)
-  #   assert_equal("Whoooo!", cheer_when_favourite_song)
-  # end  
+  def test_cheer
+    guest_favourite_song = @frank_the_dog.favourite_song
+    favourite_song_name = @song_1.song_name
+    song_match = cheer(guest_favourite_song, favourite_song_name)
+    assert_equal("Whooo!", song_match() )
+
+    # @frank_the_dog.cheer_when_favourite_song(@favourite_song, @song_name)
+    # assert_equal("Whoooo!", cheer_when_favourite_song)
+  end  
 
  
 
